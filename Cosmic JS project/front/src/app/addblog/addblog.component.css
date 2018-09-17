@@ -1,0 +1,13 @@
+.blog .btn-success {
+    border-radius: 0;
+    background: #3c8dbc;
+    border: 2px solid #3c8dbc;
+    color: #fff;
+    transition:all 0.5s;
+    align-items: center
+    }
+    .blog .btn-success:hover {
+      background:none;
+      border: 2px solid #3c8dbc;
+      color: #3c8dbc;
+      }
