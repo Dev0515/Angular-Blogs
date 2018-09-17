@@ -1,4 +1,4 @@
-<div class="blog">
+<!-- <div class="blog">
 <form [formGroup]="blogForm" (ngSubmit)="submitForm()">
           
   <input type=text formControlName="blogTitle" class="form-control" placeholder="Enter title"><br>
@@ -9,6 +9,34 @@
 <button type="submit" class="btn btn-success">Publish</button>
 <p>{{message}}</p>
 </form>
+</div>   -->
+
+
+<div class="container p-t-50">
+  <div class="row">
+      <div class="offset-md-3 col-md-6 form-back">
+<div class="blog">
+<form [formGroup]="postForm" (ngSubmit)="submitForm()" novalidate>
+     <div class="form-group">
+        <input type=text formControlName="blogTitle" class="form-control" placeholder="Enter title">
+     </div>
+     
+    <div class="form-group">
+        <textarea formControlName="blogDescription" class="form-control" placeholder="Enter description">
+        </textarea>
+    </div>
+    <div class="form-group">
+
+          <input type=file formControlName="image" class="form-control upload-padd">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Publish</button>
+          </div>
+    <p>{{message}}</p>
+  </form>
+</div>
+</div>
+</div>
 </div>
 
 

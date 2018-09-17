@@ -13,7 +13,7 @@ export class AllblogsComponent implements OnInit {
   allPosts;
   constructor(private _http: Http, private route: Router) { }
   //fetching all blogs from server
-  showAllBlogs()
+  showAllBlogs()  
   {
     this._http.get("https://api.cosmicjs.com/v1/fc12db90-b5c1-11e8-a352-25ca4a173972/object-type/posts",{
 

@@ -21,35 +21,27 @@ export class UsersinglepostComponent implements OnInit {
     this.post();
   }
 
-  post()
-  {
-   var data = this.data.params.post_id;
-   console.log(data);
-   this._http.get("https://api.cosmicjs.com/v1/fc12db90-b5c1-11e8-a352-25ca4a173972/object-type/posts/",{
-    params: {
-    
-  
-    //   params: {
-      
-    //    key: '_id',
-    //    value: data,
-    //    //title: data,  
+  post() {
+    var data = this.data.params.post_id;
+    console.log(data);
+    this._http.get("https://api.cosmicjs.com/v1/fc12db90-b5c1-11e8-a352-25ca4a173972/object-type/blogs/", {
+      params: {
+
         read_key: 'TguIxeWUofjfL6bWOS6uzd1zJllY1AQwFqOrfd83Fq2LWe65cx'
-    }  
-  })
-  .subscribe(res => {
-       this.data = res;
-       var jsondata = JSON.parse(this.data._body);
-       this.allPosts = jsondata.objects;
-       
-       this.singlePost = this.allPosts.filter(
-        post => post._id === data);
+      }
+    })
+      .subscribe(res => {
+        this.data = res;
+        //debugger;
+        var jsondata = JSON.parse(this.data._body);
+        this.allPosts = jsondata.objects;
+
+        this.singlePost = this.allPosts.filter(
+          post => post._id === data);
         var da = this.singlePost[0];
         console.log(da)
-       //this.allPosts.filter(res)
-  })   
-  
+      })
   }
-  
+
 
 }
