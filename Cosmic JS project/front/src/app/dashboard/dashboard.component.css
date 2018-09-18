@@ -85,3 +85,64 @@ transition:all 0.5s;
     padding-bottom: 3px;
     padding-left: 10px;
   }
+  .mobile-tabs {
+    display:none;
+  }
+  .nav-icon {
+    display:none;
+  }
+  /* Responsive start here  */
+
+  @media (max-width:767px) {
+    .blog .blog-image {
+      float: none;
+      margin-bottom: 20px;
+      text-align: center;
+      display: block;
+      
+        }
+        .display-none {
+          display:none;
+        }
+        .mobile-tabs {
+          display:block;
+          width: 100%;
+          margin-top: 15px;
+        }
+        .nav-icon {
+          display:block;
+          width: 100%;
+        } 
+        .nav-icon .fa-bars {
+          float: right;
+          font-size: 18px;
+          background: #2c8dc7;
+          padding: 7px 10px;
+          border-radius: 4px;
+          color: #fff;
+      }
+      .mobile-tabs ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .mobile-tabs li {
+        margin-right: 11px;
+        text-align: right;
+      }
+      .mobile-tabs li  .btn {
+      background:#f2f2f2;
+      border-radius: 0;
+      border-bottom: 2px solid #f2f2f2;
+      }
+      .mobile-tabs li .btn {
+      background: #3c8dbc;
+      border-bottom: 2px solid #3c8dbc;
+      color: #fff;
+      margin-bottom:10px;
+      max-width: 182px;
+    width: 100%;
+      }
+  }
+
+  

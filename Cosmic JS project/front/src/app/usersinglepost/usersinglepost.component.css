@@ -64,3 +64,14 @@ transition:all 0.5s;
   border: 2px solid #3c8dbc;
   color: #3c8dbc;
   }
+
+  /* Responsive start here  */
+
+  @media (max-width:767px) {
+    .blog .blog-image {
+      float: none;
+      margin-bottom: 20px;
+      text-align: center;
+      display: block;
+  }
+  }

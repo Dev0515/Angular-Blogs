@@ -22,15 +22,9 @@ export class SinglepostComponent implements OnInit {
   post() {
     var data = this.data.params.post_id;
     console.log(data);
-    this._http.get("https://api.cosmicjs.com/v1/fc12db90-b5c1-11e8-a352-25ca4a173972/object-type/posts/", {
+    this._http.get("https://api.cosmicjs.com/v1/fc12db90-b5c1-11e8-a352-25ca4a173972/object-type/blogs/", {
       params: {
 
-
-        //   params: {
-
-        //    key: '_id',
-        //    value: data,
-        //    //title: data,  
         read_key: 'TguIxeWUofjfL6bWOS6uzd1zJllY1AQwFqOrfd83Fq2LWe65cx'
       }
     })
@@ -43,8 +37,7 @@ export class SinglepostComponent implements OnInit {
           post => post._id === data);
         var da = this.singlePost[0];
         console.log(da)
-        //this.allPosts.filter(res)
-      })
+        })
 
   }
 

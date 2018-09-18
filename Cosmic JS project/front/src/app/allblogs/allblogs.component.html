@@ -1,40 +1,13 @@
-<!-- 
 
-
-  <ul *ngFor="let data of allBlogs; let i = index">
-      <li>
-      <h2>Blog {{i+1}}</h2>
-      <b>{{data.title}}</b>     
-      </li>
-      <li>      
-         {{data.content}}        
-        </li>
-        <li>
-          <a [routerLink]="['userposts']" [queryParams]="{blog_id: data._id}">Get Posts</a>
-        </li>
-      <hr>
-      </ul>
-
-
-  <ul *ngFor="let posts of allPosts;  let i = index">
-   <li>
-      <h3>Post {{i+1}}</h3>
-   <b> {{posts.title}}</b>
-   </li> 
-   <li>
-      {{posts.content}}
-     </li> 
-    <hr>
-  </ul> -->
 <a class="right pointer" (click)="loginCall()">Login</a>
 <div class="blog">
   <div class="container">
-    <ul *ngFor="let data of allPosts;  let i = index">
+    <ul *ngFor="let data of allBlogs;  let i = index">
       <div class="blog-image">
-        <img src="{{data.metadata.postImage.url}}" height=300px width=300px>
+        <img src="{{data.metadata.blogImage}}" height=300px width=300px>
       </div>
       <h3>{{data.title}}</h3>
-
+      <p>Author: {{data.metadata.author}}</p>
 
       <div class="blog-content">
         <p>{{data.content | slice: 3:250}}... </p>

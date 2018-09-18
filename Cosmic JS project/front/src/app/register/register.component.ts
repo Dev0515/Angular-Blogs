@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
       'email': ['', Validators.required],
       'fullName': ['', Validators.required],
       'password': ['', Validators.required],
-      'image': ['', Validators.required],
+      'imageURL': ['', Validators.required],
 
     });
 
@@ -83,15 +83,15 @@ export class RegisterComponent implements OnInit {
               },
               {
                 key: "image",
-                type: "file",
-                value: this.img.name
+                type: "text",
+                value: credentials.imageURL
               }
             ],
           })
             .subscribe(res => {
               console.log(res);
               if (res) {
-                this.router.navigate(['']);
+                this.router.navigate(['login']);
               }
             })
 

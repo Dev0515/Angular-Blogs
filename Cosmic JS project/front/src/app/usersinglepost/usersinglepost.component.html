@@ -4,10 +4,10 @@
 
     <ul *ngFor="let data of singlePost">
       <div class="blog-image">
-        <img src="{{data.metadata.blogImage.url}}" height=300px width=300px>
+        <img src="{{data.metadata.blogImage}}" height=300px width=300px>
       </div>
       <h3>{{data.title}}</h3>
-
+      <p>Author: {{data.metadata.author}}</p>
 
       <div class="blog-content">
         <div [innerHTML]=data.content></div>
